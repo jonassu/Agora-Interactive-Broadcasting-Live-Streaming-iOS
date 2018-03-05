@@ -187,43 +187,22 @@
 		8B5518E820440DB400474EAA /* AgoraPushStreaming */ = {
 			isa = PBXGroup;
 			children = (
+				8B92038C204D83C100FB013D /* Models */,
+				8B92038B204D838D00FB013D /* Views */,
 				8B5518E920440DB400474EAA /* AppDelegate.swift */,
 				8B5518EB20440DB400474EAA /* ViewController.swift */,
 				8B5519172044179300474EAA /* TranscodingTableViewController.swift */,
-				8B55193220441EE200474EAA /* TranscodingLayout.swift */,
 				8B551940204435C400474EAA /* ChannelViewController.swift */,
 				8B78A9522047DCA500A5285E /* PublishViewController.swift */,
-				8B78A9542047DCE400A5285E /* PublishList.swift */,
-				8B78A9562047E69200A5285E /* PublishInfoCell.swift */,
 				8B78A95E2049023700A5285E /* VideoActionTableViewController.swift */,
 				8B78A94A2046871000A5285E /* ChatMessageViewController.swift */,
 				8B78A95820480D5200A5285E /* SubscribeTableViewController.swift */,
-				8B78A95A20480D8300A5285E /* SubscribeInfoCell.swift */,
-				8B78A94E2046876E00A5285E /* ChatMessageCell.swift */,
-				8B78A94C2046874D00A5285E /* Message.swift */,
-				8B78A95C20480DA100A5285E /* SubscribeList.swift */,
-				8B5518ED20440DB400474EAA /* Main.storyboard */,
-				8B5518F020440DB400474EAA /* Assets.xcassets */,
-				8B5518F220440DB400474EAA /* LaunchScreen.storyboard */,
-				8B5519462044464F00474EAA /* Settings.storyboard */,
 				8B55194B2044487F00474EAA /* CustomParameterViewController.swift */,
-				8B78A9502047CF9C00A5285E /* VideoViewLayouter.swift */,
-				8B55194F2044FE1000474EAA /* AutoTestSettings.swift */,
-				8B5519542044FEFB00474EAA /* ProfileCell.swift */,
-				8B5519522044FEC100474EAA /* CustomParameterCell.swift */,
-				8B55194E2044FE1000474EAA /* CustomParameters.swift */,
 				8B55194A2044487E00474EAA /* VideoProfilesViewController.swift */,
-				8B5518F520440DB400474EAA /* Info.plist */,
-				8B5519382044305B00474EAA /* VideoView.swift */,
 				8B551948204447B400474EAA /* SettingsTableViewController.swift */,
-				8B55193E2044315C00474EAA /* LiveKitExtension.swift */,
-				8B5519362044301600474EAA /* VideoSession.swift */,
-				8B55193C204430F900474EAA /* MediaInfo.swift */,
-				8B55193A204430B700474EAA /* TypeAlias.swift */,
+				8B5518F020440DB400474EAA /* Assets.xcassets */,
+				8B5518F520440DB400474EAA /* Info.plist */,
 				8B55192E20441D6300474EAA /* AgoraPushStreaming-Bridging-Header.h */,
-				8B55193420441F3C00474EAA /* CommonExtensions.swift */,
-				8B5519442044415E00474EAA /* DualStreamType.swift */,
-				8B55190020440DB400474EAA /* Info.plist */,
 			);
 			path = AgoraPushStreaming;
 			sourceTree = "<group>";
@@ -231,6 +210,7 @@
 		8B5518FD20440DB400474EAA /* AgoraPushStreamingTests */ = {
 			isa = PBXGroup;
 			children = (
+				8B55190020440DB400474EAA /* Info.plist */,
 				8B5518FE20440DB400474EAA /* AgoraPushStreamingTests.swift */,
 			);
 			path = AgoraPushStreamingTests;
@@ -260,6 +240,42 @@
 				8B55191A20441BA300474EAA /* libresolv.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B92038B204D838D00FB013D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B5519382044305B00474EAA /* VideoView.swift */,
+				8B78A9562047E69200A5285E /* PublishInfoCell.swift */,
+				8B78A95A20480D8300A5285E /* SubscribeInfoCell.swift */,
+				8B78A94E2046876E00A5285E /* ChatMessageCell.swift */,
+				8B5518ED20440DB400474EAA /* Main.storyboard */,
+				8B5518F220440DB400474EAA /* LaunchScreen.storyboard */,
+				8B5519462044464F00474EAA /* Settings.storyboard */,
+				8B5519542044FEFB00474EAA /* ProfileCell.swift */,
+				8B5519522044FEC100474EAA /* CustomParameterCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B92038C204D83C100FB013D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B78A9542047DCE400A5285E /* PublishList.swift */,
+				8B78A9502047CF9C00A5285E /* VideoViewLayouter.swift */,
+				8B55194F2044FE1000474EAA /* AutoTestSettings.swift */,
+				8B55194E2044FE1000474EAA /* CustomParameters.swift */,
+				8B55193E2044315C00474EAA /* LiveKitExtension.swift */,
+				8B5519362044301600474EAA /* VideoSession.swift */,
+				8B55193C204430F900474EAA /* MediaInfo.swift */,
+				8B55193A204430B700474EAA /* TypeAlias.swift */,
+				8B55193420441F3C00474EAA /* CommonExtensions.swift */,
+				8B5519442044415E00474EAA /* DualStreamType.swift */,
+				8B78A95C20480DA100A5285E /* SubscribeList.swift */,
+				8B78A94C2046874D00A5285E /* Message.swift */,
+				8B55193220441EE200474EAA /* TranscodingLayout.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
