@@ -39,6 +39,7 @@ If you want to kill the program, if you have to open the stream, please close th
 If you encounter this error, you need to wait for a while before re-streaming.
 
 ## Sample button introduction
+
 -Suspended window is even Mai Mai image
 -Set button to set transcoding flow parameters (App has default parameters)
 -RTMP button to start or cancel the stream
