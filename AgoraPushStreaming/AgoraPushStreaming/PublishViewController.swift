@@ -87,9 +87,9 @@ private extension PublishViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    
+    //Setting Push Streaming URL, Also Custom url
     func streamURL(for room: String) -> String {
-        return <#推流地址#>
+        return <#streamURL#>  + "\(room)"
     }
     func alert(string: String) {
         let alert = UIAlertController(title: nil, message: string, preferredStyle: .alert)

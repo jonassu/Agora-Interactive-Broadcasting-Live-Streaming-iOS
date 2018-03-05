@@ -180,22 +180,22 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ssq-ii-0u9" firstAttribute="centerX" secondItem="orH-NA-Tya" secondAttribute="centerX" id="0Jv-d4-Qxk"/>
-                            <constraint firstItem="HmG-Eh-OiT" firstAttribute="top" secondItem="lln-4y-rX7" secondAttribute="top" constant="475" id="2rG-bk-VHE"/>
                             <constraint firstItem="VGJ-Un-6cT" firstAttribute="top" secondItem="lln-4y-rX7" secondAttribute="top" constant="20" id="2wf-Af-RmQ"/>
-                            <constraint firstItem="HmG-Eh-OiT" firstAttribute="top" secondItem="mVu-4V-zvW" secondAttribute="bottom" constant="15" id="D92-qH-XaJ"/>
+                            <constraint firstItem="HmG-Eh-OiT" firstAttribute="centerX" secondItem="orH-NA-Tya" secondAttribute="centerX" id="Cfr-eC-jWD"/>
+                            <constraint firstItem="mVu-4V-zvW" firstAttribute="centerX" secondItem="HmG-Eh-OiT" secondAttribute="centerX" id="MtT-wq-0VY"/>
                             <constraint firstItem="lsD-kT-NlW" firstAttribute="top" secondItem="lln-4y-rX7" secondAttribute="top" constant="-20" id="NL8-fg-0tU"/>
-                            <constraint firstItem="lln-4y-rX7" firstAttribute="trailing" secondItem="HmG-Eh-OiT" secondAttribute="trailing" constant="21" id="Okz-l8-acf"/>
-                            <constraint firstItem="orH-NA-Tya" firstAttribute="top" secondItem="HmG-Eh-OiT" secondAttribute="bottom" constant="11" id="QAc-Oo-3H7"/>
+                            <constraint firstItem="lln-4y-rX7" firstAttribute="trailing" secondItem="ssq-ii-0u9" secondAttribute="trailing" constant="21" id="ThW-mX-86d"/>
                             <constraint firstItem="lsD-kT-NlW" firstAttribute="leading" secondItem="lln-4y-rX7" secondAttribute="leading" id="Ufn-MM-pta"/>
                             <constraint firstItem="lln-4y-rX7" firstAttribute="bottom" secondItem="lsD-kT-NlW" secondAttribute="bottom" id="WPr-Ap-Lsr"/>
                             <constraint firstItem="pZz-uT-V54" firstAttribute="top" secondItem="lln-4y-rX7" secondAttribute="top" constant="15" id="dYN-6P-kIl"/>
                             <constraint firstItem="lln-4y-rX7" firstAttribute="trailing" secondItem="pZz-uT-V54" secondAttribute="trailing" constant="26" id="eH3-1h-dZi"/>
-                            <constraint firstItem="mVu-4V-zvW" firstAttribute="centerX" secondItem="HmG-Eh-OiT" secondAttribute="centerX" id="nAE-ae-xSw"/>
-                            <constraint firstItem="ssq-ii-0u9" firstAttribute="top" secondItem="orH-NA-Tya" secondAttribute="bottom" constant="10" id="sLd-C4-aVG"/>
+                            <constraint firstItem="orH-NA-Tya" firstAttribute="centerX" secondItem="ssq-ii-0u9" secondAttribute="centerX" id="fKQ-k1-LdK"/>
+                            <constraint firstItem="lln-4y-rX7" firstAttribute="bottom" secondItem="ssq-ii-0u9" secondAttribute="bottom" constant="31" id="iqE-kJ-0hk"/>
                             <constraint firstItem="lln-4y-rX7" firstAttribute="trailing" secondItem="lsD-kT-NlW" secondAttribute="trailing" id="sYl-Ch-qbL"/>
+                            <constraint firstItem="orH-NA-Tya" firstAttribute="top" secondItem="HmG-Eh-OiT" secondAttribute="bottom" constant="11" id="thq-9s-KqV"/>
+                            <constraint firstItem="ssq-ii-0u9" firstAttribute="top" secondItem="orH-NA-Tya" secondAttribute="bottom" constant="10" id="ucY-Tf-gyD"/>
                             <constraint firstItem="VGJ-Un-6cT" firstAttribute="centerX" secondItem="lln-4y-rX7" secondAttribute="centerX" id="ud7-81-kMf"/>
-                            <constraint firstItem="lln-4y-rX7" firstAttribute="trailing" secondItem="orH-NA-Tya" secondAttribute="trailing" constant="21" id="xPI-nM-aoA"/>
+                            <constraint firstItem="HmG-Eh-OiT" firstAttribute="top" secondItem="mVu-4V-zvW" secondAttribute="bottom" constant="15" id="y6h-r2-KuL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lln-4y-rX7"/>
                     </view>
@@ -1105,7 +1105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subscribeInfoCell" rowHeight="198" id="uwI-Zq-a1v" customClass="SubscribeInfoCell" customModule="AgoraStreaming" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subscribeInfoCell" rowHeight="198" id="uwI-Zq-a1v" customClass="SubscribeInfoCell" customModule="AgoraPushStreaming" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="240" height="198"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uwI-Zq-a1v" id="tpB-At-1GP">
@@ -1180,7 +1180,7 @@
         <!--Video Action Table View Controller-->
         <scene sceneID="c0x-rX-yXa">
             <objects>
-                <tableViewController id="qPX-U9-Ek0" customClass="VideoActionTableViewController" customModule="AgoraStreaming" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qPX-U9-Ek0" customClass="VideoActionTableViewController" customModule="AgoraPushStreaming" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8TQ-Wz-UJX">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="131"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
