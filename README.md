@@ -1,13 +1,14 @@
 # **Agora-Interactive-Broadcasting-Live-Streaming-iOS**
 
-*阅读中文版本: [中文](README.md)*
-This open source sample project demonstrates how to use the Live Streaming API for transcoding。
+*阅读中文版本: [中文](README.zh.md)*
 
+
+This open source sample project demonstrates how to use the Live Streaming API for transcoding。
 The small demo contains following features:
 
-- Join/Leave calls
-- Publish/Unpublish streams
-- Add transcoding user and start live streaming
+- join/leave calls
+- publish/unpublish streams
+- add transcoding user and start live streaming
 
 
 ## How to run
@@ -19,29 +20,35 @@ fileprivate let liveKit = AgoraLiveKit.sharedLiveKit(withAppId: <#Appid#>)
 ```
 
 
-Get an available push address, fill in the push address
+Get an available push address, fill in the push address.
 ```
 func streamURL(for room: String) -> String {
-return <#streamURL#>
+   return <#streamURL#>
 }
 ```
+Next, download the **Agora Video SDK** from [Agora.io SDK](https://www.agora.io/en/blog/download/). Unzip the downloaded SDK package and copy the files in **AgoraPushStreaming** folder
 
-Finally, open the project with XCode, connect the device, compile and run
+- AgoraRtcEngineKit.framework
 
-## prompt
-If you want to kill the program, if you have to open the stream, please close the stream and then kill, otherwise it will cause the stream address is not available, reported 19 errors
+to the "AgoraPushStreaming" folder in project.
+
+Finally, open the project with XCode, connect the device, compile and run.
+
+## Notice
+If you want to kill the program, if you have to open the stream, please close the stream and then kill, otherwise it will cause the stream address is not available, reported errorcode:19
 If you encounter this error, you need to wait for a while before re-streaming.
 
 ## Sample button introduction
-- Suspended window is even Mai Mai image
+-Suspended window is even Mai Mai image
 -Set button to set transcoding flow parameters (App has default parameters)
 -RTMP button to start or cancel the stream
 -Exit button to close the program
-##Operating environment
-- Use XCode open the project
--Connect iPhone 。
+
+## Developer Environment Requirements
+- Use Xcode open the project
+-Connect iPhone
 - Run
--Part of the simulator there will be missing or performance issues, it is recommended to use a real machine
+-Part of the simulator there will be missing or performance issues, it is recommended to use a real machine.
 
 ## Connect Us
 
