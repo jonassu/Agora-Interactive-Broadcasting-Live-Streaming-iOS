@@ -1,5 +1,7 @@
 # **Agora-Interactive-Broadcasting-Live-Streaming-iOS**
 
+*Other languages: [English](README.md)*
+
 这个开源示例项目演示了如何如何使用直播优化API进行转码推流。
 
 在这个示例项目中包含了以下功能：
