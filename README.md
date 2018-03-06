@@ -3,7 +3,7 @@
 *阅读中文版本: [中文](README.zh.md)*
 
 
-This open source sample project demonstrates how to use the Live Streaming API for transcoding。
+This open source sample project demonstrates how to use the Live Streaming API for transcoding.
 The small demo contains following features:
 
 - join/leave calls
@@ -35,7 +35,7 @@ to the "AgoraPushStreaming" folder in project.
 Finally, open the project with XCode, connect the device, compile and run.
 
 ## Notice
-If you want to kill the program, if you have to open the stream, please close the stream and then kill, otherwise it will cause the stream address is not available, reported errorcode:19
+If you want to kill the program, if you have to open the stream, please close the stream and then kill, otherwise it will cause the stream address is not available, reported errorcode:19.
 If you encounter this error, you need to wait for a while before re-streaming.
 
 ## Sample button introduction

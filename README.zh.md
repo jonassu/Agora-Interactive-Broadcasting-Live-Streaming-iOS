@@ -20,15 +20,13 @@ fileprivate let liveKit = AgoraLiveKit.sharedLiveKit(withAppId: <#Appid#>)
 
 ```
 func streamURL(for room: String) -> String {
-return <#推流地址#>
+return <#streamURL#>
 }
 ```
-然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **AgoraPushStreaming** 复制到本项目的 “AgoraPushStreaming” 文件夹下。
+然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **AgoraRtcEngineKit.framework** 复制到本项目的 “AgoraPushStreaming” 文件夹下。
 
 
 最后用 XCode打开该项目，连上设备，编译并运行。
-
-也可以使用 CMD + R 直接编译运行。
 
 ## 提示
 如果要强杀程序，如果已经开启推流，请关闭推流后再强杀，否则会造成推流地址不可用，报19错误。
