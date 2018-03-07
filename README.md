@@ -26,11 +26,7 @@ func streamURL(for room: String) -> String {
    return <#streamURL#>
 }
 ```
-Next, download the **Agora Video SDK** from [Agora.io SDK](https://www.agora.io/en/blog/download/). Unzip the downloaded SDK package and copy the framework file
-
-- AgoraRtcEngineKit.framework
-
-to the "AgoraPushStreaming/AgoraPushStreaming/" folder in project.
+Next, download the **Agora Video SDK** from [Agora.io SDK](https://www.agora.io/en/blog/download/). Unzip the downloaded SDK package and copy the framework file  **AgoraRtcEngineKit.framework**   to the "AgoraPushStreaming/AgoraPushStreaming/" folder in project.
 
 Finally, open the project with XCode, connect the device, compile and run.
 
@@ -47,7 +43,6 @@ If you encounter this error, you need to wait for a while before re-streaming.
 ## Developer Environment Requirements
 - Use Xcode open the project
 - Connect iPhone
-- Run
 - Part of the simulator there will be missing or performance issues, it is recommended to use a real machine.
 
 ## Connect Us
