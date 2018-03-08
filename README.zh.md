@@ -25,7 +25,7 @@ func streamURL(for room: String) -> String {
 return <#streamURL#>
 }
 ```
-然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **AgoraRtcEngineKit.framework** 复制到本项目的 “AgoraPushStreaming” 文件夹下。
+然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **AgoraRtcEngineKit.framework** 复制到本项目的 “AgoraPushStreaming/AgoraPushStreaming/” 文件夹下。
 
 
 最后用 XCode打开该项目，连上设备，编译并运行。
