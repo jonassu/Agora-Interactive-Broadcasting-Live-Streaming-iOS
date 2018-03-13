@@ -413,7 +413,7 @@ extension ChannelViewController:VideoActionTableVCDelegate{
             publishList.stopAll()
             publishList.removeAllResult()
         }
-        updateInterface(withAnimation: true, targetSize: containerView.frame.size)
+//        updateInterface(withAnimation: true, targetSize: containerView.frame.size)
         
     }
     

@@ -74,7 +74,7 @@ class TranscodingTableViewController: UITableViewController {
         
         preferredContentSize = CGSize(width: 320, height: 380)
         
-//        updateView(with: transcoding, isCustom: isCustomTranscodingSettings)
+        updateView(with: transcoding, isCustom: isCustomTranscodingSettings)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
