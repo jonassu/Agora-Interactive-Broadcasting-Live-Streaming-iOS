@@ -376,6 +376,7 @@ extension ChannelViewController:PublishVCDelegate{
 extension ChannelViewController:TranscodingTableVCDelegate{
     func transcodingTableVCDidUpdate(_ transcodingTableVC: TranscodingTableViewController) {
      transcoding = transcodingTableVC.transcoding
+     transcodingLayout = transcodingTableVC.transcodingLayout
      isCustomTranscodingSetting = transcodingTableVC.isCustomTranscodingSettings
      isOnlyUseChannel0 = transcodingTableVC.isOnlyChannel0
      if isCustomTranscodingSetting{
