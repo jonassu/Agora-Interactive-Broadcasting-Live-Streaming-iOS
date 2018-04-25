@@ -71,6 +71,7 @@
     [alert addAction:cancelAction];
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.keyboardType = UIKeyboardTypeURL;
         textField.returnKeyType = UIReturnKeyDone;
         
         [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidChangeNotification object:textField queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
@@ -136,12 +137,6 @@
     [self.rtcEngine enableVideo];
     [self.rtcEngine setVideoProfile:AgoraVideoProfileDEFAULT swapWidthAndHeight:YES];
     [self.rtcEngine setClientRole:AgoraClientRoleBroadcaster];
-    
-    NSDictionary *dic = @{@"rtc.signal_debug" : @{@"lbss" : @"lbss", @"host" : @"125.88.159.176"}};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:0 error:nil];
-    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    [self.rtcEngine setParameters:jsonString];
-//    [self.rtcEngine setParameters:@"{\"rtc.signal_debug\" : { \"lbss\" : \"lbss\", \"host\" : \"125.88.159.176\"}}"];
     
     AgoraRtcVideoCanvas *canvas = [[AgoraRtcVideoCanvas alloc] init];
     canvas.view = self.localVideoView;
