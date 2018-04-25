@@ -39,6 +39,7 @@
     self.remoteUids = [[NSMutableArray alloc] init];
     
     self.roomNameLabel.text = self.roomName;
+    self.publishStreamButton.enabled = NO;
     
     [self loadAgoraKit];
     [self joinChannel];
@@ -214,6 +215,7 @@
     [self appendToLogView:log];
     
     self.localUid = uid;
+    self.publishStreamButton.enabled = YES;
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine firstLocalVideoFrameWithSize:(CGSize)size elapsed:(NSInteger)elapsed {
