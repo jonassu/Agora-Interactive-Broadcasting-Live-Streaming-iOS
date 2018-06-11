@@ -43,7 +43,7 @@ extension VideoViewLayouter {
         if sessionsCount == 0 {
             
         } else if sessionsCount == 1 {
-            //单人全屏
+            //full screen for one person
             actualFullSessions = sessions
             
             let view = sessions.first!.hostingView!
@@ -51,7 +51,7 @@ extension VideoViewLayouter {
             layoutConstraints.append(contentsOf: layout(fullView: view))
             
         } else if fullSession != nil && isForceFullView {
-            //强制全屏
+            //force full screen
             actualFullSessions = [fullSession!]
             
             let view = fullSession!.hostingView!
@@ -59,7 +59,7 @@ extension VideoViewLayouter {
             layoutConstraints.append(contentsOf: layout(fullView: view))
             
         } else if sessionsCount == 2 && fullSession == nil {
-            //二分屏
+            //divide the screen into two havles
             actualFullSessions = sessions
             
             let view1 = sessions.first!.hostingView!
@@ -88,7 +88,7 @@ extension VideoViewLayouter {
             }
             
         } else if sessionsCount <= 4 && fullSession == nil {
-            //四分屏
+            //divide the screen into four equal parts
             actualFullSessions = sessions
             var views = sessions.map({ (session) -> AGView in
                 return session.hostingView
@@ -122,11 +122,10 @@ extension VideoViewLayouter {
             layoutConstraints.append(constraintsHeight2)
             
         } else {
-            //一大N小屏
+            //one big view, some small views
             let fullView: AGView
             var smallViews = [AGView]()
             
-            //确定大小是哪些
             if let fullSession = fullSession {
                 fullView = fullSession.hostingView!
                 actualFullSessions = [fullSession]
@@ -147,19 +146,18 @@ extension VideoViewLayouter {
                 }
             }
             
-            //根据画布形状，确定小屏在下边还是右边
             let edgePosition: EdgePosition = (targetSize.width >= targetSize.height ? .right : .bottom)
             
-            //小屏最大尺寸
+            //maximum width for small view
         #if os(iOS)
             let MaxSmallViewWidth: CGFloat = 150
         #else
             let MaxSmallViewWidth: CGFloat = 220
         #endif
-            //大屏最小宽高比
+            //minimum width to height ratio of large view
             let MinLargeViewRatio: CGFloat = (targetSize.width / targetSize.height >= 0.667 || targetSize.width / targetSize.height <= 1.5) ? 0.75 : 1
             
-            //计算一行多少个小屏
+            //count the number of small view in a row
             var MaxPosibleCountPerLine = smallViews.count
             let largerSide: CGFloat
             let smallerSide: CGFloat
@@ -190,7 +188,7 @@ extension VideoViewLayouter {
                 break
             }
             
-            //开始布局
+            //start layout
             containerView.addSubview(fullView)
             setSmallViews(&smallViews, maxTo: (countPerLine * lines))
             for view in smallViews {
@@ -269,7 +267,7 @@ private extension VideoViewLayouter {
         
         var layoutConstraints = [NSLayoutConstraint]()
         
-        //行数
+        //number of rows
         let smallViewLineCounts: Int
         if countPerLine > 0 {
             smallViewLineCounts = Int(ceil(Double(smallViews.count) / Double(countPerLine)))
@@ -277,13 +275,12 @@ private extension VideoViewLayouter {
             smallViewLineCounts = 0
         }
         
-        //小屏方形
         for view in smallViews {
             let squar = NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0)
             layoutConstraints.append(squar)
         }
         
-        //大屏
+        //large view
         let constraintsFullViewA: [NSLayoutConstraint]
         switch edgePosition {
         case .bottom:
@@ -310,7 +307,7 @@ private extension VideoViewLayouter {
         let constraintsFullViewB = NSLayoutConstraint.constraints(withVisualFormat: constraintsFullViewBString, options: [], metrics: nil, views: constraintsFullViewBViewDic)
         layoutConstraints.append(contentsOf: constraintsFullViewB)
         
-        //小屏
+        //small views
         for lineNumber in 0..<smallViewLineCounts {
             
             let rulerIndex = lineNumber * countPerLine

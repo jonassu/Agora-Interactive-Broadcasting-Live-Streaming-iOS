@@ -66,7 +66,7 @@ class ViewController: UIViewController{
         
         
     }
-    //MARK:加入房间
+    //MARK:join channel
     func enterChannel() {
         guard let channel = channelName.text, !channel.isEmpty else {
             return
