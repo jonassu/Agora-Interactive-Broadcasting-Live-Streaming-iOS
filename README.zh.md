@@ -1,37 +1,32 @@
-# Agora Live Streaming for iOS (Objective-C)
+# Agora Inject Streaming for iOS 
 
 *Read this in other languages: [English](README.md)*
 
-这个开源示例项目演示了如何使用互动直播 API 进行转码推流。
+这个开源示例项目演示了如何使用互动直播 API 导入外部视频源。
 
 在这个示例项目中包含了以下功能：
 
 - 加入通话和离开通话；
-- 开始和停止转码推流；
+- 导入外部视频源；
+- 删除导入的外部视频源
 - 切换前置摄像头和后置摄像头；
 - 静音和解除静音；
 
-Agora 视频 SDK 支持 iOS / Android / Windows / Web 等多个平台，你可以查看对应各平台的示例项目：
-* [iOS](https://github.com/AgoraIO/Agora-Interactive-Broadcasting-Live-Streaming-iOS)
-* [Android](https://github.com/AgoraIO/Agora-Interactive-Broadcasting-Live-Streaming-Android)
-* [Windows](https://github.com/AgoraIO/Agora-Interactive-Broadcasting-Live-Streaming-Windows)
-* [Web](https://github.com/AgoraIO/Agora-Interactive-Broadcasting-Live-Streaming-Web)
-
 ## 运行示例程序
-首先在 [Agora.io 注册](https://dashboard.agora.io/cn/signup/) 注册账号，并创建自己的测试项目，获取到 AppID。将 AppID 填写进KeyCenter.m
+首先在 [Agora.io 注册](https://dashboard.agora.io/cn/signup/) 注册账号，并创建自己的测试项目，获取到 AppID。将 AppID 填写进KeyCenter.swift
 
 ```
-+ (NSString *)AppId {
-    return @"Your App ID";
+struct KeyCenter {
+    static let AppId: String = <#Your App ID#>
 }
 ```
 
-然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **libs/AgoraRtcEngineKit.framework** 复制到 “AgoraLiveStreaming-Objective-C” 文件夹下。
+然后在 [Agora.io SDK](https://www.agora.io/cn/download/) 下载 **视频通话 + 直播 SDK**，解压后将其中的 **libs/AgoraRtcEngineKit.framework** 复制到 “AgoraInjectStreaming” 文件夹下。
 
 最后用 XCode 打开 AgoraLiveStreaming.xcodeproj，连接 iPhone／iPad 测试设备，设置有效的开发者签名后即可运行。
 
 ## 运行环境
-- XCode 9.0 +
+- XCode 8.0 +
 - iOS 真机设备
 - 不支持模拟器
 
