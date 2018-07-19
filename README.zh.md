@@ -3,6 +3,7 @@
 
 - release/broadcasting-main 合图推流主项目
 - release/broadcasting-lite 轻直播场景优化
+- release/broadcasting-injection 导入外部视频流
 
 ## 联系我们
 - 完整的 API 文档见 [文档中心](https://docs.agora.io/cn/)
