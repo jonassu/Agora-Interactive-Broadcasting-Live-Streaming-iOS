@@ -13,6 +13,8 @@ import AgoraRtcEngineKit
 let ScreenWidth = UIScreen.main.bounds.size.width
 let ScreenHeight = UIScreen.main.bounds.size.height
 
+let RecordUrl = "http://123.155.153.85:3233/v1/recording/start"
+let StopUrl = "http://123.155.153.85:3233/v1/recording/stop"
 
 class LiveRoomViewController: UIViewController {
     
@@ -23,8 +25,10 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet weak var rtmpButton: UIButton!
     @IBOutlet weak var injectConfigButton: UIButton!
     @IBOutlet weak var remoteContainerView: UIView!
+    @IBOutlet weak var recordButton: UIButton!
     
     var roomName: String!
+    var myUid: UInt!
     var clientRole = AgoraClientRole.audience {
         didSet {
             updateButtonsVisiablity()
@@ -61,6 +65,12 @@ class LiveRoomViewController: UIViewController {
     fileprivate var injectStreamConfig = AgoraLiveInjectStreamConfig()
     
     fileprivate var injectRtmpUrl: String?
+    
+    fileprivate lazy var poster: ServerHelper = {
+        let poster = ServerHelper()
+        poster.delegate = self
+        return poster
+    }()
     
     @IBAction func doDoubleTapped(_ sender: UITapGestureRecognizer) {
         if fullSession == nil {
@@ -107,6 +117,17 @@ class LiveRoomViewController: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 popView?.frame = self.view.frame
             }
+        }
+    }
+    
+    @IBAction func doRecordPressed(_ sender: UIButton) {
+        let paramDic = ["appid" : KeyCenter.AppId,
+                        "channel": self.roomName,
+                        "uid": myUid] as [String : Any]
+        if sender.isSelected {
+            self.poster.postAction(to: StopUrl, with: paramDic)
+        } else {
+            self.poster.postAction(to: RecordUrl, with: paramDic)
         }
     }
     
@@ -266,6 +287,10 @@ private extension LiveRoomViewController {
 }
 
 extension LiveRoomViewController: AgoraRtcEngineDelegate {
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinChannel channel: String, withUid uid: UInt, elapsed: Int) {
+        myUid = uid
+    }
+    
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
         let userSession = videoSession(ofUid: uid)
         rtcEngine.setupRemoteVideo(userSession.canvas)
@@ -345,5 +370,26 @@ extension LiveRoomViewController: PopViewDelegate {
         rtcEngine.addInjectStreamUrl(url, config: self.injectStreamConfig)
         
         popView.removeFromSuperview()
+    }
+}
+
+extension LiveRoomViewController: ServerHelperDelagate {
+    func serverHelper(_ serverHelper: ServerHelper, url: String, data: Data, error: Error?) {
+        do {
+            let jsonData: NSDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+            DispatchQueue.main.async {
+                switch url {
+                case StopUrl:
+                    self.recordButton.isSelected = false
+                case RecordUrl:
+                    self.recordButton.isSelected = true
+                default:
+                    return
+                }
+            }
+        } catch  {
+            AlertUtil.showAlert(message: "Connect server error!")
+            return
+        }
     }
 }

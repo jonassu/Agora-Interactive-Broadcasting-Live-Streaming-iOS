@@ -150,6 +150,29 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qun-SK-Gpb">
+                                <rect key="frame" x="225" y="617" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="0.1885702055" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="e3K-3A-5ba"/>
+                                    <constraint firstAttribute="width" constant="40" id="onM-3w-Ztb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="10"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Stop"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doRecordPressed:" destination="qIT-cl-sTL" eventType="touchUpInside" id="5XU-tz-glH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -168,6 +191,8 @@
                             <constraint firstAttribute="trailing" secondItem="RVv-WM-InO" secondAttribute="trailing" id="gtG-hB-iZC"/>
                             <constraint firstItem="EUI-vw-HEw" firstAttribute="centerY" secondItem="sV2-5a-Fv4" secondAttribute="centerY" id="kvg-sE-VmW"/>
                             <constraint firstItem="CO1-5x-c1G" firstAttribute="top" secondItem="Erv-qX-JPm" secondAttribute="bottom" constant="10" id="n3j-J7-hn3"/>
+                            <constraint firstItem="Qun-SK-Gpb" firstAttribute="centerY" secondItem="Erv-qX-JPm" secondAttribute="centerY" id="u9H-FN-KKh"/>
+                            <constraint firstItem="xev-1t-KTN" firstAttribute="leading" secondItem="Qun-SK-Gpb" secondAttribute="trailing" constant="10" id="v5L-Zm-yS9"/>
                             <constraint firstAttribute="trailing" secondItem="EUI-vw-HEw" secondAttribute="trailing" constant="10" id="vHY-co-4F8"/>
                             <constraint firstItem="Nsi-O6-22u" firstAttribute="centerY" secondItem="Erv-qX-JPm" secondAttribute="centerY" id="xrh-mb-hIn"/>
                             <constraint firstAttribute="trailing" secondItem="Nsi-O6-22u" secondAttribute="trailing" constant="10" id="z2t-hg-e26"/>
@@ -177,6 +202,7 @@
                         <outlet property="audioMuteButton" destination="vLn-jl-umd" id="Urw-Xy-MU4"/>
                         <outlet property="broadcastButton" destination="Erv-qX-JPm" id="UQF-zv-rVu"/>
                         <outlet property="injectConfigButton" destination="Nsi-O6-22u" id="LsF-Gv-aeG"/>
+                        <outlet property="recordButton" destination="Qun-SK-Gpb" id="gVi-wE-nV4"/>
                         <outlet property="remoteContainerView" destination="RVv-WM-InO" id="mBc-vi-kGC"/>
                         <outlet property="roomNameLabel" destination="sV2-5a-Fv4" id="fJN-tU-ick"/>
                         <outlet property="rtmpButton" destination="xev-1t-KTN" id="5NC-1B-OMH"/>

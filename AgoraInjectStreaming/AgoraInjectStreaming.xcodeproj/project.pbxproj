@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F88E9D82119717000F0A7E5 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88E9D72119717000F0A7E5 /* ServerHelper.swift */; };
+		0F88E9DB211971C200F0A7E5 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88E9DA211971C200F0A7E5 /* AlertUtil.swift */; };
 		0F99AA9921003185008AFD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99AA9821003185008AFD51 /* AppDelegate.swift */; };
 		0F99AA9E21003185008AFD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F99AA9C21003185008AFD51 /* Main.storyboard */; };
 		0F99AAA021003186008AFD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F99AA9F21003186008AFD51 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F88E9D72119717000F0A7E5 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
+		0F88E9DA211971C200F0A7E5 /* AlertUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
 		0F99AA9521003185008AFD51 /* AgoraInjectStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgoraInjectStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F99AA9821003185008AFD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F99AA9D21003185008AFD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0F88E9D92119717A00F0A7E5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0F88E9DA211971C200F0A7E5 /* AlertUtil.swift */,
+				0F88E9D72119717000F0A7E5 /* ServerHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0F99AA8C21003185008AFD51 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +121,7 @@
 				0F99AAAE21003393008AFD51 /* KeyCenter.swift */,
 				0F5A184721009CB500959B61 /* Controllers */,
 				0F99AAD1210085D3008AFD51 /* Views */,
+				0F88E9D92119717A00F0A7E5 /* Utils */,
 				0F99AA9C21003185008AFD51 /* Main.storyboard */,
 				0F99AA9821003185008AFD51 /* AppDelegate.swift */,
 				0F99AAC321004C7B008AFD51 /* CommonExtensions.swift */,
@@ -217,12 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F88E9DB211971C200F0A7E5 /* AlertUtil.swift in Sources */,
 				0F99AA9921003185008AFD51 /* AppDelegate.swift in Sources */,
 				0F99AAD7210085D3008AFD51 /* VideoSession.swift in Sources */,
 				0F99AAD8210085D3008AFD51 /* PopView.swift in Sources */,
 				0F99AAAF21003393008AFD51 /* KeyCenter.swift in Sources */,
 				0F99AAAD21003329008AFD51 /* MainViewController.swift in Sources */,
 				0F99AAC221003FEB008AFD51 /* InjectStreamConfigTableViewController.swift in Sources */,
+				0F88E9D82119717000F0A7E5 /* ServerHelper.swift in Sources */,
 				0F99AADB210085D3008AFD51 /* VideoViewLayouter.swift in Sources */,
 				0F99AAC421004C7C008AFD51 /* CommonExtensions.swift in Sources */,
 				0F99AAC02100367C008AFD51 /* LiveRoomViewController.swift in Sources */,
