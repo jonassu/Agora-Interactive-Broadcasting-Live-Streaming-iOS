@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
 
 @class LiveRoomViewController;
 @protocol LiveRoomVCDelegate <NSObject>

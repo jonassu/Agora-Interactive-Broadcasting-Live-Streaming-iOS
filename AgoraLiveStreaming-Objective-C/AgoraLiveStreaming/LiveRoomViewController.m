@@ -8,6 +8,7 @@
 
 #import "LiveRoomViewController.h"
 #import "KeyCenter.h"
+#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
 
 @interface LiveRoomViewController () <AgoraRtcEngineDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *roomNameLabel;
@@ -135,9 +136,14 @@
 - (void)loadAgoraKit {
     self.rtcEngine = [AgoraRtcEngineKit sharedEngineWithAppId:[KeyCenter AppId] delegate:self];
     [self.rtcEngine setChannelProfile:AgoraChannelProfileLiveBroadcasting];
-    [self.rtcEngine enableVideo];
-    [self.rtcEngine setVideoProfile:AgoraVideoProfileDEFAULT swapWidthAndHeight:YES];
     [self.rtcEngine setClientRole:AgoraClientRoleBroadcaster];
+    [self.rtcEngine enableVideo];
+    
+    AgoraVideoEncoderConfiguration *videoConfiguration = [[AgoraVideoEncoderConfiguration alloc] initWithSize:AgoraVideoDimension640x360
+                                                                                                    frameRate:AgoraVideoFrameRateFps15
+                                                                                                      bitrate:AgoraVideoBitrateStandard
+                                                                                              orientationMode:AgoraVideoOutputOrientationModeFixedPortrait];
+    [self.rtcEngine setVideoEncoderConfiguration:videoConfiguration];
     
     AgoraRtcVideoCanvas *canvas = [[AgoraRtcVideoCanvas alloc] init];
     canvas.view = self.localVideoView;
